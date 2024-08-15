@@ -9,7 +9,7 @@ class Author(models.Model):
     biography = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.first_name, self.last_name
+        return f"{self.first_name}, {self.last_name}"
 
     class Meta:
         verbose_name = 'author'
@@ -25,6 +25,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name = 'category'
+        verbose_name_plural = 'categories'
         ordering = ['category_name']
 
 
@@ -32,7 +33,7 @@ class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='author_book')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category_book')
-    publication_date = models.DateTimeField()
+    publication_date = models.DateTimeField(null=True, blank=True)
     isbn = models.CharField(max_length=100, unique=True)
     summary = models.TextField(null=True, blank=True)
 
