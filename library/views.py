@@ -34,3 +34,14 @@ def edit_book(request, pk):
             return redirect('books')
     return render(request, 'add_book.html', {'form': BookForm(instance=obj)})
 
+
+def confirm_delete(request, pk):
+    obj = get_object_or_404(Book, id=pk)
+    return render(request, "book_confirm_delete.html", {"book": obj})
+
+
+def delete_book(request, pk):
+    obj = get_object_or_404(Book, id=pk)
+    if obj:
+        obj.delete()
+        return render(request, "book_delete.html", {"book": obj})

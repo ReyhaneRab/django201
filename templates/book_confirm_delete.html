@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Do you confirm delete? {{ book.title }}</h1>
+    <a href="{% url 'book_delete' pk=book.pk %}">Yes</a>
+    <a href="{% url 'books' %}">NO</a>
+</body>
+</html>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="3fb2a096-7a89-44e1-a812-6469862671a1">
+    <data-source source="LOCAL" name="db [2]" uuid="23753057-0ab6-4f1a-926a-c1e2192b3fd5">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\root\Desktop\python\django201\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ZeroFall\PycharmProjects\django201\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
